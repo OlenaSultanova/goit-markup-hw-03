@@ -30,21 +30,22 @@ p {
     margin: 0;
 }
 
+img {
+    display: block;
+}
+
 /* Header */
 .page-header {
     background: var(--white-background);  
-}
-
-.header-border {
-    border-bottom: 1px solid #E7E9FC;
+    border-bottom: 1px solid var(--accent)
 }
 
 .container {
     width: 1158px;
     margin-left: auto;
     margin-right: auto;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .main-menu {
@@ -123,12 +124,15 @@ p {
 
 .address-nav {
     display: flex;
-    margin-left: auto;
-    
 }
 
-.address-nav .item+.item {
-    margin-left: 40px;
+.address-nav .item {
+    margin-right: 40px;
+
+}
+
+.address-nav .item:last-child {
+    margin-right: 0;
 }
 
 address .link {
@@ -148,8 +152,7 @@ address .link:hover {
 /* 1st section */
 
 .section {
-    padding-top: 120px;
-    
+    padding-top: 120px;  
 }
 
 .hero {
@@ -165,7 +168,7 @@ address .link:hover {
     line-height: 1.07;
     margin-top: 0;
     margin-bottom: 0;
-    width: 496px;
+    max-width: 496px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -178,11 +181,16 @@ address .link:hover {
     letter-spacing: 0.04em;
     font-weight: 500;
     font-size: 16px;
+    border: none;
     border-radius: 4px;
+    display: block;
     padding: 16px 32px;
     min-width: 169px;
+    height: 56px;
     text-align: center;
     margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -194,10 +202,16 @@ address .link:hover {
 /* 2nd section */
 /* Company principles */
 
+.principles-section {
+    padding: 120px 0;
+}
 
+.company-principles {
+    visibility: hidden;
+}
 
 .princip-list .item {
-    margin-right: 20px;
+    margin-right: 24px;
 }
     
 .princip-list .item:last-child {
@@ -210,7 +224,8 @@ address .link:hover {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark);
-    
+    width: calc((100% - 72px) / 4);
+    margin-bottom: 8px;
  }
 
 .princip-text {
@@ -218,12 +233,16 @@ address .link:hover {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--subtle-text);
-    margin-top: 8px;
     
 }
 
 /* 3d section */
 /* Portfolio */
+
+.examples-section {
+    padding-bottom: 120px;
+}
+
 .portfolio-title {
     font-size: 36px;
     line-height: 1.11;
@@ -231,20 +250,16 @@ address .link:hover {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--dark);
+    margin-bottom: 72px;
   
 }
 
-
-
-
 .examples {
-    justify-content: center;
     margin-top: 72px;
 }
 
 .examples .item {
-    display: block;
-    width: 360px;
+    width: calc((100% - 48px) / 3);
     margin-right: 24px;
 }
 
@@ -269,11 +284,12 @@ address .link:hover {
     color: var(--dark);
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 72px;
      
 }
 
 .teamlist {
-    margin-top: 72px;
+    display: flex;
     
 }
 
@@ -282,6 +298,8 @@ address .link:hover {
     margin-right: 24px;
     justify-content: center;
     text-align: center;
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .teamlist .team-card:last-child {
@@ -290,11 +308,10 @@ address .link:hover {
 
 .team-card {
     background-color: var(--white-background);
-    align-items: center;
-    display: block;
-    width: 264px;
-   
+}
 
+.team-card-text {
+    padding: 32px 16px;
 }
 
 .team-card-title {
@@ -303,7 +320,8 @@ address .link:hover {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark);
-    margin-top: 32px;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .team-function{
@@ -311,13 +329,9 @@ address .link:hover {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--subtle-text);
-    margin-top: 8px;
-    padding-bottom: 32px;
+    text-align: center;
 }
 
-.team-card {
-    background-color: var(--white-background);
-}
 
 /* Footer */
 .footer {
@@ -333,13 +347,16 @@ address .link:hover {
     justify-content: center;
 }
 
-
+.footer-container .logo {
+    display: inline-block;
+    margin-bottom: 16px;
+}
 
 .footer-text {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--light);
-    margin-top: 16px;
+    max-width: 264px;
     
 }
 .footer-logo-color {
@@ -348,6 +365,14 @@ address .link:hover {
 
 /* Styles for portfolio.html */
 
+.portfolio-section {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.portfolio-section-title {
+    visibility: hidden;
+}
 
 .nav-button {
     cursor: pointer;
@@ -369,6 +394,7 @@ address .link:hover {
 .portfolio-filter {
     text-align: justify;
     align-items: center;
+    margin-bottom: 72px;
     
 }
 
@@ -385,22 +411,22 @@ address .link:hover {
 .nav-button:hover,
 .nav-button:focus {
     color: var(--white-background);
+    border: 1px solid transparent;
     background: var(--pressed-state);
+    border: 1px solid transparent;
 }
 
 .portfolio {
     flex-wrap: wrap;
-    justify-content: center;
     margin-top: 72px;
 
 }
 
 .portfolio .item {
     display: block;
-    width: 360px;
+    width: calc((100% - 48px) / 3);
     margin-right: 24px;
     margin-bottom: 48px;
-    padding-bottom: 32px;
 
 }
 
@@ -412,13 +438,20 @@ address .link:hover {
     margin-right: 0;
 }
 
+.portfolio-text-container {
+    padding: 32px 16px;
+    border: 1px solid var(--accent);
+    border-top: none;
+
+}
+
 .portfoliocard-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark);  
-    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .portfoliocard-text {
@@ -426,7 +459,6 @@ address .link:hover {
     line-height: 1.5;
     letter-spacing: 0.02;
     color: var(--subtle-text);
-    margin-top: 8px;
 
 }
 
