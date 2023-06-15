@@ -206,12 +206,23 @@ address .link:hover {
     padding: 120px 0;
 }
 
-.company-principles {
-    visibility: hidden;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .princip-list .item {
     margin-right: 24px;
+    width: calc((100% - 72px) / 4);
 }
     
 .princip-list .item:last-child {
@@ -224,7 +235,6 @@ address .link:hover {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark);
-    width: calc((100% - 72px) / 4);
     margin-bottom: 8px;
  }
 
@@ -368,10 +378,6 @@ address .link:hover {
 .portfolio-section {
     padding-top: 96px;
     padding-bottom: 120px;
-}
-
-.portfolio-section-title {
-    visibility: hidden;
 }
 
 .nav-button {
